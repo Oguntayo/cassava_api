@@ -21,8 +21,6 @@ except Exception as e:
 # Class mapping
 class_names = ['Bacterial Blight', 'Brown Streak Disease', 'Green Mite', 'Mosaic Disease', 'Healthy', 'Unknown']
 
-env_config = os.getenv("PROD_APP_SETTINGS", "config.DevelopmentConfig")
-app.config.from_object(env_config)
 
 @app.route('/')
 def home():
