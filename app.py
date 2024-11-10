@@ -4,9 +4,12 @@ import tensorflow_hub as hub
 import numpy as np
 from PIL import Image
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
 
+# Enable CORS for all routes
+CORS(app)
 # Load the model
 model_url = 'https://tfhub.dev/google/cropnet/classifier/cassava_disease_V1/2'
 try:
